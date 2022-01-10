@@ -33,15 +33,17 @@ export default function Test({ onSubmit }) {
         <div className='col-5'>
           <button onClick={() => {
             const res = operacije[indexOperacije].operacija(prviBroj, drugiBroj);
-            alert('Vas odgovor je ' + ((res === Number(resenje)) ? 'tacan' : 'netacan'));
-            if (res === Number(resenje)) {
+            const nResenje = Number(resenje)
+            alert('Vas odgovor je ' + ((res === nResenje) ? 'tacan' : 'netacan'));
+            if (res === nResenje) {
               setDisabled(true);
             }
             onSubmit({
               prviBroj,
               drugiBroj,
-              resenje: Number(resenje),
-              operacija: operacije[indexOperacije]
+              resenje: nResenje,
+              operacija: operacije[indexOperacije],
+              tacan: res === nResenje
             })
           }} disabled={disabled} className='btn btn-primary form-control'>Proveri</button>
         </div>
