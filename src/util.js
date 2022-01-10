@@ -10,7 +10,7 @@ export const operacije = [{
   operacija: (a, b) => a * b
 }, {
   znak: '/',
-  operacija: (a, b) => a / b
+  operacija: (a, b) => Math.floor(a / b)
 }, {
   znak: '%',
   operacija: (a, b) => a % b
