@@ -60,6 +60,7 @@ export default function Test({ onSubmit }) {
             setPrviBroj(randomBroj(1500));
             setDrugiBroj(randomBroj(1500));
             setIndexOperacije(randomBroj(operacije.length));
+            setResenje('');
             setDisabled(false);
           }} className='btn btn-secondary form-control'>Promeni pitanje</button>
         </div>
